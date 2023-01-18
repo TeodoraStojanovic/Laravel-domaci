@@ -9,6 +9,16 @@ class Genre extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'id',
+        'zanr'
+    ];
+
+    protected $hidden = [
+        'created_at',
+        'updated_at'
+    ];
+
     public function book(){
         return $this->hasMany(Book::class);
 
